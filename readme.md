@@ -13,4 +13,4 @@
             
             -Password : 123456
 
- > 3- nom deplugin: appPlugin
+ > 3- nom deplugin: app Plugin

@@ -1,4 +1,24 @@
+<head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700, 600,500,400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<style>
+	.table,.table tr td,.table tr th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.table tr th,.table tr td {
+  padding: 15px;
+}
+	</style>
+</head>
 <?php
 
 /**
@@ -117,9 +137,36 @@ public function appPlugin(){
 public function app_plugin_plugin(){
 	echo "<h1>plugin information</h1><div>This is a short description of what the plugin does. It's displayed in the WordPress admin area.
 	<br>Version 1.0.0 | By ghali |</div>";
-	// global $wpdb;
-	// $user=$wpdb->get_var("select user_email from wp_pluginusers");
-	// echo $user;
+	 global $wpdb;
+	 $data=$wpdb->get_results($wpdb->prepare("select * from settings"));
+	?>
+	<h1>affichage informations</h1>
+
+	<table class="table">
+  <thead class="thead-dark">
+    <tr>
+    
+      <th scope="col">nom</th>
+      <th scope="col">text</th>
+      <th scope="col">options</th>
+    </tr>
+  </thead>
+  <tbody>
+  <?php if(count($data)>0)
+		 {
+		  foreach($data as $row=>$data){ ?>
+    <tr>
+      
+      <td><?php echo $data->nom?></td>
+      <td><?php echo $data->nom?></td>
+      <td><?php echo $data->options?></td>
+    </tr>
+	<?php }
+		      }
+		?>
+  </tbody>
+</table>
+	<?php
 }
 // public function app_plugin_dashboard(){
 // 	echo "<h3>welcome to app configuration</h3>";
