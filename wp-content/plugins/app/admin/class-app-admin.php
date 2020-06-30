@@ -125,7 +125,7 @@ public function app_plugin_plugin(){
 	?>
 	<h1>affichage informations</h1>
 
-	<table class="table col-8" >
+	<table class="table table-hover col-8" >
   <thead class="thead-dark">
     <tr>
     
@@ -138,7 +138,7 @@ public function app_plugin_plugin(){
   <?php if(count($data)>0)
 		 {
 		  foreach($data as $row=>$data){ ?>
-    <tr>
+    <tr >
       
       <td><?php echo $data->nom?></td>
       <td><?php echo $data->nom?></td>
