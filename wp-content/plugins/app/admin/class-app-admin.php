@@ -1,23 +1,6 @@
 <head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700, 600,500,400,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-	<style>
-	.table,.table tr td,.table tr th {  
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-.table {
-  border-collapse: collapse;
-  width: 80%;
-}
-
-.table tr th,.table tr td {
-  padding: 15px;
-}
-	</style>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
 <?php
 
@@ -94,7 +77,7 @@ class App_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/app-admin.css', array(), $this->version, 'all' );
+	//wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/app-admin.css', array(), $this->version, 'all' );
 
 	}
 
@@ -142,7 +125,7 @@ public function app_plugin_plugin(){
 	?>
 	<h1>affichage informations</h1>
 
-	<table class="table">
+	<table class="table col-8" >
   <thead class="thead-dark">
     <tr>
     

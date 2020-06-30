@@ -30,7 +30,14 @@ class App_Activator {
 	 * @since    1.0.0
 	 */
 	public static function activate() {
-
+		$query="CREATE TABLE `settings` (
+			`nom` varchar(255) NOT NULL,
+			`text` varchar(255) NOT NULL,
+			`options` varchar(255) NOT NULL
+		   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+		   ";
+		require_once(ABSPATH.'wp-admin/includes/upgrade.php');
+		dbDelta($query);
 	}
 
 }

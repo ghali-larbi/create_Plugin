@@ -30,7 +30,8 @@ class App_Deactivator {
 	 * @since    1.0.0
 	 */
 	public static function deactivate() {
-
+global $wpdb;
+ $wpdb->query("drop table if exists settings");
 	}
 
 }
